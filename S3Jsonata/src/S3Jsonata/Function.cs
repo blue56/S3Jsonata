@@ -1,3 +1,4 @@
+using System.Text.Json;
 using Amazon.Lambda.Core;
 
 // Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
@@ -18,9 +19,11 @@ public class Function
     {
 
         Transformer.Run(
-            Request.Region, Request.Bucketname, 
+            Request.Region, Request.Bucketname,
             Request.Template, Request.Input, Request.Result);
 
-        return "OK";
+        string jsonString = JsonSerializer.Serialize(Request);
+
+        return jsonString;
     }
 }
