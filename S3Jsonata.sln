@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "S3Jsonata", "S3Jsonata", "{D4885A66-B11D-4628-AD40-C985E6E2A153}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D8E29916-2409-493D-A16A-5157A1145B76}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "S3Jsonata", "S3Jsonata\src\S3Jsonata\S3Jsonata.csproj", "{82EEE449-E335-4F02-BA3F-B309E717FCD4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{65D52CA8-B0F1-4ECD-B7FD-E12A41966C92}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "S3Jsonata.Tests", "S3Jsonata\test\S3Jsonata.Tests\S3Jsonata.Tests.csproj", "{3B02B649-72F2-4886-949E-9F032CC88E49}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82EEE449-E335-4F02-BA3F-B309E717FCD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82EEE449-E335-4F02-BA3F-B309E717FCD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82EEE449-E335-4F02-BA3F-B309E717FCD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82EEE449-E335-4F02-BA3F-B309E717FCD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B02B649-72F2-4886-949E-9F032CC88E49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B02B649-72F2-4886-949E-9F032CC88E49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B02B649-72F2-4886-949E-9F032CC88E49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B02B649-72F2-4886-949E-9F032CC88E49}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D8E29916-2409-493D-A16A-5157A1145B76} = {D4885A66-B11D-4628-AD40-C985E6E2A153}
+		{82EEE449-E335-4F02-BA3F-B309E717FCD4} = {D8E29916-2409-493D-A16A-5157A1145B76}
+		{65D52CA8-B0F1-4ECD-B7FD-E12A41966C92} = {D4885A66-B11D-4628-AD40-C985E6E2A153}
+		{3B02B649-72F2-4886-949E-9F032CC88E49} = {65D52CA8-B0F1-4ECD-B7FD-E12A41966C92}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B819EA8-F063-4CDE-A94B-640DF7156DD2}
+	EndGlobalSection
+EndGlobal
