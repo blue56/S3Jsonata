@@ -6,7 +6,6 @@ using Jsonata.Net.Native;
 
 public class Transformer
 {
-
     /// <summary>
     /// A simple function that takes a string and does a ToUpper
     /// </summary>
@@ -23,7 +22,7 @@ public class Transformer
         return result;
     }
 
-    public static async void Run(string Region, string Bucketname,
+    public static async Task Run(string Region, string Bucketname,
         string TemplatePath, string InputPath, string ResultPath)
     {
         // Read
@@ -37,10 +36,10 @@ public class Transformer
         var stream = new MemoryStream(
                 Encoding.UTF8.GetBytes(resultString));
 
-        SaveFile(Region, Bucketname, ResultPath, stream, "application/json");
+        await SaveFile(Region, Bucketname, ResultPath, stream, "application/json");
     }
 
-    public static void SaveFile(string Region, string Bucketname,
+    public static async Task SaveFile(string Region, string Bucketname,
         string Key, Stream Stream, string ContentType)
     {
         var region = RegionEndpoint.GetBySystemName(Region);
@@ -55,7 +54,7 @@ public class Transformer
             InputStream = Stream
         };
 
-        _client.PutObjectAsync(putRequest).Wait();
+        await _client.PutObjectAsync(putRequest);
     }
 
     static async Task<string> ReadS3ObjectAsync(string Region, string bucketName, string key)
@@ -78,5 +77,4 @@ public class Transformer
             }
         }
     }
-
 }

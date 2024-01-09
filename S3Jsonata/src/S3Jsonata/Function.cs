@@ -20,9 +20,11 @@ public class Function
 
         Transformer.Run(
             Request.Region, Request.Bucketname,
-            Request.Template, Request.Input, Request.Result);
+            Request.Template, Request.Input, Request.Result).Wait();
 
         string jsonString = JsonSerializer.Serialize(Request);
+
+        context.Logger.LogInformation("Run completed");
 
         return jsonString;
     }
